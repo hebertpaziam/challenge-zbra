@@ -11,10 +11,11 @@ import { IResponse } from "@/interfaces/response.interface";
 
 import { TextField } from "../TextField";
 import { AlertBox } from "../AlertBox";
+import { ActionButton } from "../ActionButton";
 
 export type MainFormProps = {};
 
-export default function MainForm() {
+export default function MainForm({}: MainFormProps) {
   const [response, setResponse] = useState<IResponse>();
 
   const {
@@ -87,13 +88,12 @@ export default function MainForm() {
       <div className="footer">
         {response && <AlertBox response={response} />}
 
-        <button
-          className="submitbtn"
+        <ActionButton
           type="submit"
           disabled={!dirty || !isValid || isSubmitting}
         >
           {isSubmitting ? "Enviando..." : "Enviar"}
-        </button>
+        </ActionButton>
       </div>
     </form>
   );

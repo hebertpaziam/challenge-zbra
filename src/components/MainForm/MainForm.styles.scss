@@ -27,28 +27,5 @@
     justify-content: flex-end;
     gap: 1rem;
     width: 100%;
-
-    .submitbtn {
-      padding: 1rem 1.25rem;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      font-weight: bold;
-      color: var(--neutral-color-100);
-      border-radius: 3.5px;
-      background-color: var(--primary-color-50);
-      transition: all 100ms ease-in-out;
-      box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);
-
-      &:hover {
-        background-color: var(--primary-color-30);
-        box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.3);
-      }
-
-      &:disabled {
-        cursor: not-allowed;
-        background-color: var(--primary-color-90);
-        box-shadow: none;
-      }
-    }
   }
 }
