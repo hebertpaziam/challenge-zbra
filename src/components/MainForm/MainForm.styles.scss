@@ -32,65 +32,6 @@
     }
   }
 
-  .group {
-    width: 100%;
-
-    .control {
-      position: relative;
-      width: 100%;
-      margin-top: 0.625rem;
-      padding: 0.05rem;
-      border: 1px solid var(--neutral-color-50);
-      border-radius: 0.25rem;
-
-      label {
-        position: absolute;
-        top: -0.75rem;
-        left: 0.75rem;
-        padding: 0 0.25rem;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        font-weight: bold;
-        border-radius: 4px;
-        background-color: var(--neutral-color-100);
-      }
-
-      input {
-        width: 100%;
-        padding: 0.95rem;
-      }
-
-      &:focus-within {
-        outline: 1px solid var(--neutral-color-50);
-      }
-    }
-    .feedback {
-      height: 1.5rem;
-      font-size: 0.875rem;
-    }
-
-    &.-error {
-      .control {
-        border-color: var(--danger-color-50);
-      }
-
-      .control label,
-      .feedback {
-        color: var(--danger-color-50);
-      }
-    }
-    &.-success {
-      .control {
-        border-color: var(--success-color-50);
-      }
-
-      .control label,
-      .feedback {
-        color: var(--success-color-50);
-      }
-    }
-  }
-
   .actions {
     display: flex;
     align-items: center;

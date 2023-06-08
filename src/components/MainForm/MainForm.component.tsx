@@ -7,6 +7,7 @@ import validationSchema from "@/utils/validations";
 import { useEffect, useState } from "react";
 import { fetchPasswordValidation } from "@/api/password.api";
 import { IResponse } from "@/interfaces/response.interface";
+import { TextField } from "../TextField";
 
 export type MainFormProps = {};
 
@@ -33,64 +34,54 @@ export default function MainForm() {
       );
 
       const response = await fetchPasswordValidation(formValues);
-      debugger;
       setResponse(response);
     },
   });
+
+  const highlightPassword = () => {
+    if (!!errors.password) return "error";
+    else if (!!values.password) return "success";
+    else return;
+  };
 
   return (
     <form className="main-form" onSubmit={handleSubmit}>
       <h1 className="title">Valide sua senha</h1>
 
       <fieldset disabled={isSubmitting}>
-        <div className={`group ${!!errors.name && "-error"}`}>
-          <div className="control">
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              placeholder="Digite seu nome"
-              type="text"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.name}
-            />
-          </div>
-          <div className="feedback">{errors.name}</div>
-        </div>
+        <TextField
+          id="name"
+          type="text"
+          label="Nome"
+          placeholder="Digite seu nome"
+          value={values.name}
+          error={errors.name}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
 
-        <div className={`group ${!!errors.email && "-error"}`}>
-          <div className="control">
-            <label htmlFor="email">E-mail</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Digite seu e-mail"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-          </div>
-          <div className="feedback">{errors.email}</div>
-        </div>
-        <div className={`group ${!!errors.password ? "-error" : "-success"}`}>
-          <div className="control">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              placeholder="Digite sua senha"
-              type="number"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.password}
-            />
-          </div>
-          <div className="feedback">
-            {errors.password || (!!values.password && "Senha válida!")}
-          </div>
-        </div>
+        <TextField
+          id="email"
+          type="email"
+          label="E-mail"
+          placeholder="Digite seu e-mail"
+          value={values.email}
+          error={errors.email}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
+
+        <TextField
+          id="password"
+          type="number"
+          label="Senha"
+          placeholder="Digite sua senha"
+          value={values.password}
+          error={errors.password}
+          success={!!values.password ? "Senha válida!" : undefined}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
       </fieldset>
 
       <div className="actions">
