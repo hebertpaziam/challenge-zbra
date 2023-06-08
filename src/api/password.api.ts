@@ -18,13 +18,11 @@ export const fetchPasswordValidation = async (
     return {
       ok: true,
       message: "Resultado enviado com sucesso!",
-      data: await response.json(),
     } as IResponse;
   } catch (error) {
     return {
       ok: false,
       message: "Falha ao enviar resultado. Tente novamente",
-      data: error,
     } as IResponse;
   }
 };

@@ -32,12 +32,7 @@ export default function MainForm({}: MainFormProps) {
     initialValues: { name: "", email: "", password: "" },
     onSubmit: async () => {
       setResponse(undefined);
-
-      const formValues = await new Promise<any>((resolve) =>
-        setTimeout(() => resolve(values), 3000)
-      );
-
-      const response = await fetchPasswordValidation(formValues);
+      const response = await fetchPasswordValidation(values);
       setResponse(response);
     },
   });
