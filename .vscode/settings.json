@@ -11,9 +11,12 @@
         "next-env.d.ts": true,
     },
     "cSpell.words": [
+        "esnext",
         "formgroup",
         "formik",
+        "ITCSS",
         "Roboto",
+        "SMACSS",
         "submitbtn"
     ]
 }

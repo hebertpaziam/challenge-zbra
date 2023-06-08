@@ -1,4 +1,7 @@
+@import "../../styles/2-tools";
+
 .action-button {
+  min-width: 140px;
   padding: 1rem 1.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -18,5 +21,11 @@
     cursor: not-allowed;
     background-color: var(--primary-color-90);
     box-shadow: none;
+  }
+
+  @include mobile-screen {
+    & {
+      padding: 0.5rem;
+    }
   }
 }

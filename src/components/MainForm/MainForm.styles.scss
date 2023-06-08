@@ -1,19 +1,22 @@
+@import "../../styles/2-tools";
+
 .main-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   gap: 1rem;
   width: 100%;
   max-width: 768px;
+  height: 100%;
   padding: 1rem 2rem;
 
   > .title {
-    margin: auto auto 1rem;
+    margin: 0 auto 1rem;
     color: var(--primary-color-50);
   }
 
-  > fieldset {
+  > .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,11 +24,27 @@
     gap: 1.2rem;
   }
 
-  .footer {
+  > .footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
     width: 100%;
+  }
+
+  @include mobile-screen {
+    > .content {
+      gap: 1rem;
+    }
+
+    > .footer {
+      flex-direction: column;
+      margin-top: auto;
+
+      > .action-button {
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
   }
 }

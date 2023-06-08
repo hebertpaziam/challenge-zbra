@@ -46,7 +46,7 @@ export default function MainForm({}: MainFormProps) {
     <form className="main-form" onSubmit={handleSubmit}>
       <h1 className="title">Valide sua senha</h1>
 
-      <fieldset disabled={isSubmitting}>
+      <fieldset className="content" disabled={isSubmitting}>
         <TextField
           id="name"
           type="text"

@@ -1,8 +1,14 @@
+@import "../../styles/2-tools";
+
 .alert-box {
   &.-error {
     color: var(--danger-color-50);
   }
   &.-success {
     color: var(--success-color-50);
+  }
+
+  @include mobile-screen {
+    text-align: center;
   }
 }
