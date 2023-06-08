@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ZBRA Challenge
 
-## Getting Started
+- As instruções para o teste estão dentro do diretório `instructions`;
+- Indicamos que use React, Angular ou TypeScript (fique à vontade);
+- Você terá 3 dias para entregar o projeto (tudo bem se levar um pouco mais de tempo);
+- Consideraremos apenas código presente no branch `main`;
+- Com este projeto, queremos entender seus conhecimentos!
 
-First, run the development server:
+E por fim, esperamos que você entregue o seu melhor!
+
+---
+
+## Iniciando
+
+Esse é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Primeiramente, instale as dependencias usando o NPM:
+
+```bash
+npm install
+```
+
+em seguida rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) em seu browser e veja o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Esse projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para automaticamente otimizar e carregar a Roboto, uma fonte do Google Fonts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Saiba Mais
 
-## Learn More
+Para saber mais sobre o Next.js, de uma olhada nos recursos a seguir:
 
-To learn more about Next.js, take a look at the following resources:
+- [Documentação Next.js](https://nextjs.org/docs) - saiba mais sobre as funcionalidades Next.js e sua API.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Você pode conferir [o repositório Next.js no GitHub](https://github.com/vercel/next.js/)
