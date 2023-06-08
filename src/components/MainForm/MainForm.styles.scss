@@ -1,0 +1,133 @@
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 768px;
+  padding: 1rem 2rem;
+
+  .title {
+    margin: auto auto 1rem;
+    color: var(--primary-color-50);
+  }
+
+  > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    &:disabled {
+      .control {
+        color: var(--neutral-color-60);
+        background-color: var(--neutral-color-90);
+
+        * {
+          cursor: progress;
+        }
+      }
+    }
+  }
+
+  .group {
+    width: 100%;
+
+    .control {
+      position: relative;
+      width: 100%;
+      margin-top: 0.625rem;
+      padding: 0.05rem;
+      border: 1px solid var(--neutral-color-50);
+      border-radius: 0.25rem;
+
+      label {
+        position: absolute;
+        top: -0.75rem;
+        left: 0.75rem;
+        padding: 0 0.25rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: bold;
+        border-radius: 4px;
+        background-color: var(--neutral-color-100);
+      }
+
+      input {
+        width: 100%;
+        padding: 0.95rem;
+      }
+
+      &:focus-within {
+        outline: 1px solid var(--neutral-color-50);
+      }
+    }
+    .feedback {
+      height: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    &.-error {
+      .control {
+        border-color: var(--danger-color-50);
+      }
+
+      .control label,
+      .feedback {
+        color: var(--danger-color-50);
+      }
+    }
+    &.-success {
+      .control {
+        border-color: var(--success-color-50);
+      }
+
+      .control label,
+      .feedback {
+        color: var(--success-color-50);
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 100%;
+
+    .response {
+      &.-error {
+        color: var(--danger-color-50);
+      }
+      &.-success {
+        color: var(--success-color-50);
+      }
+    }
+
+    .submitbtn {
+      padding: 1rem 1.25rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: bold;
+      color: var(--neutral-color-100);
+      border-radius: 3.5px;
+      background-color: var(--primary-color-50);
+      transition: all 100ms ease-in-out;
+      box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: var(--primary-color-30);
+        box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.3);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: var(--primary-color-90);
+        box-shadow: none;
+      }
+    }
+  }
+}

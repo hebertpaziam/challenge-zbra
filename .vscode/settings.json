@@ -9,5 +9,11 @@
         "node_modules": true,
         ".next": true,
         "next-env.d.ts": true,
-    }
+    },
+    "cSpell.words": [
+        "formgroup",
+        "formik",
+        "Roboto",
+        "submitbtn"
+    ]
 }
