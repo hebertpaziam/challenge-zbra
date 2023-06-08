@@ -8,7 +8,7 @@
   max-width: 768px;
   padding: 1rem 2rem;
 
-  .title {
+  > .title {
     margin: auto auto 1rem;
     color: var(--primary-color-50);
   }
@@ -19,34 +19,14 @@
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
-
-    &:disabled {
-      .control {
-        color: var(--neutral-color-60);
-        background-color: var(--neutral-color-90);
-
-        * {
-          cursor: progress;
-        }
-      }
-    }
   }
 
-  .actions {
+  .footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
     width: 100%;
-
-    .response {
-      &.-error {
-        color: var(--danger-color-50);
-      }
-      &.-success {
-        color: var(--success-color-50);
-      }
-    }
 
     .submitbtn {
       padding: 1rem 1.25rem;

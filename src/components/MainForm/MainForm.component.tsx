@@ -2,12 +2,15 @@
 
 import "./MainForm.styles.scss";
 
+import { useState } from "react";
 import { useFormik } from "formik";
+
 import validationSchema from "@/utils/validations";
-import { useEffect, useState } from "react";
 import { fetchPasswordValidation } from "@/api/password.api";
 import { IResponse } from "@/interfaces/response.interface";
+
 import { TextField } from "../TextField";
+import { AlertBox } from "../AlertBox";
 
 export type MainFormProps = {};
 
@@ -38,12 +41,6 @@ export default function MainForm() {
     },
   });
 
-  const highlightPassword = () => {
-    if (!!errors.password) return "error";
-    else if (!!values.password) return "success";
-    else return;
-  };
-
   return (
     <form className="main-form" onSubmit={handleSubmit}>
       <h1 className="title">Valide sua senha</h1>
@@ -54,8 +51,9 @@ export default function MainForm() {
           type="text"
           label="Nome"
           placeholder="Digite seu nome"
-          value={values.name}
+          disabled={isSubmitting}
           error={errors.name}
+          value={values.name}
           handleBlur={handleBlur}
           handleChange={handleChange}
         />
@@ -65,8 +63,9 @@ export default function MainForm() {
           type="email"
           label="E-mail"
           placeholder="Digite seu e-mail"
-          value={values.email}
+          disabled={isSubmitting}
           error={errors.email}
+          value={values.email}
           handleBlur={handleBlur}
           handleChange={handleChange}
         />
@@ -76,18 +75,18 @@ export default function MainForm() {
           type="number"
           label="Senha"
           placeholder="Digite sua senha"
-          value={values.password}
+          disabled={isSubmitting}
           error={errors.password}
+          value={values.password}
           success={!!values.password ? "Senha válida!" : undefined}
           handleBlur={handleBlur}
           handleChange={handleChange}
         />
       </fieldset>
 
-      <div className="actions">
-        <div className={`response ${!!response?.ok ? "-success" : "-error"}`}>
-          {response?.message}
-        </div>
+      <div className="footer">
+        {response && <AlertBox response={response} />}
+
         <button
           className="submitbtn"
           type="submit"

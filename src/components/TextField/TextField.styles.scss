@@ -1,7 +1,7 @@
 .text-field {
   width: 100%;
 
-  .control {
+  > .control {
     position: relative;
     width: 100%;
     margin-top: 0.625rem;
@@ -9,7 +9,7 @@
     border: 1px solid var(--neutral-color-50);
     border-radius: 0.25rem;
 
-    label {
+    > label {
       position: absolute;
       top: -0.75rem;
       left: 0.75rem;
@@ -21,7 +21,7 @@
       background-color: var(--neutral-color-100);
     }
 
-    input {
+    > input {
       width: 100%;
       padding: 0.95rem;
     }
@@ -30,30 +30,48 @@
       outline: 1px solid var(--neutral-color-50);
     }
   }
-  
-  .feedback {
+
+  > .feedback {
     height: 1.5rem;
     font-size: 0.875rem;
   }
 
   &.-error {
-    .control {
+    > .control {
       border-color: var(--danger-color-50);
     }
 
-    .control label,
-    .feedback {
+    > .control > label,
+    > .feedback {
       color: var(--danger-color-50);
     }
   }
   &.-success {
-    .control {
+    > .control {
       border-color: var(--success-color-50);
     }
 
-    .control label,
-    .feedback {
+    > .control > label,
+    > .feedback {
       color: var(--success-color-50);
+    }
+  }
+  &.-disabled {
+    > .control {
+      color: var(--neutral-color-60);
+      border-color: var(--neutral-color-90);
+
+      * {
+        cursor: progress;
+      }
+
+      > label {
+        color: var(---neutral-color-90);
+      }
+    }
+
+    > .feedback {
+      visibility: hidden;
     }
   }
 }

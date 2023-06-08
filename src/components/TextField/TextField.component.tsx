@@ -4,18 +4,20 @@ import "./TextField.styles.scss";
 
 export type TextFieldProps = {
   id: string;
-  error?: string;
   label: string;
   placeholder: string;
-  success?: string;
   type: "text" | "email" | "number";
   value: string | number;
+  disabled?: boolean;
+  error?: string;
+  success?: string;
   handleBlur: any;
   handleChange: any;
 };
 
 export default function TextField({
   id,
+  disabled,
   error,
   label,
   placeholder,
@@ -30,7 +32,8 @@ export default function TextField({
       className={
         "text-field" +
         `${!!error ? " -error" : ""}` +
-        `${!error && !!success ? " -success" : ""}`
+        `${!error && !!success ? " -success" : ""}` +
+        `${disabled ? " -disabled" : ""}`
       }
     >
       <div className="control">

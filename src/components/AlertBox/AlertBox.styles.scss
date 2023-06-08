@@ -1,0 +1,8 @@
+.alert {
+  &.-error {
+    color: var(--danger-color-50);
+  }
+  &.-success {
+    color: var(--success-color-50);
+  }
+}
