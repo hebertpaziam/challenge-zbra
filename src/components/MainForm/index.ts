@@ -1,2 +1,2 @@
-export { default as MainForm } from "./MainForm.component";
-export type { MainFormProps } from "./MainForm.component";
+export { default as MainForm } from "./MainForm";
+export type { MainFormProps } from "./MainForm";

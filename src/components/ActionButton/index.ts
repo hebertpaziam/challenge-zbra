@@ -1,2 +1,2 @@
-export { default as ActionButton } from "./ActionButton.component";
-export type { ActionButtonProps } from "./ActionButton.component";
+export { default as ActionButton } from "./ActionButton";
+export type { ActionButtonProps } from "./ActionButton";

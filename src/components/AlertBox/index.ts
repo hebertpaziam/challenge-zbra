@@ -1,2 +1,2 @@
-export { default as AlertBox } from "./AlertBox.component";
-export type { AlertBoxProps } from "./AlertBox.component";
+export { default as AlertBox } from "./AlertBox";
+export type { AlertBoxProps } from "./AlertBox";
