@@ -14,8 +14,8 @@ test("should validate password same adjacents", () => {
 
   expect(passwordSameAdjacents(differentAdjacents)).toBeFalsy();
 
-  const seed = Array.from({ length: 5 }, () => faker.number.int());
-  const sameAdjacents = +[...seed, seed[0]].join("");
+  const seed = Array.from({ length: 5 }, () => faker.number.int({ max: 9 }));
+  const sameAdjacents = +[seed[0], ...seed].join("");
   expect(passwordSameAdjacents(sameAdjacents)).toBeTruthy();
 });
 
