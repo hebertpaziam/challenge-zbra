@@ -5,9 +5,9 @@ import "./ActionButton.styles.scss";
 
 export type ActionButtonProps = {
   type: "submit" | "button";
-  disabled?: boolean;
   children: ReactNode;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 export default function ActionButton({

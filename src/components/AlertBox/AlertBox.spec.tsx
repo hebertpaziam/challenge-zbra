@@ -24,13 +24,13 @@ describe("AlertBox", () => {
     render(<AlertBox response={{ ...props.response, ok: false }} />);
     const alert = screen.getByText(props.response.message);
 
-    expect(alert.className).toEqual("alert-box -error");
+    expect(alert).toHaveClass("alert-box", "-error");
   });
 
   it("should render success alert box", () => {
     render(<AlertBox response={{ ...props.response, ok: true }} />);
     const alert = screen.getByText(props.response.message);
 
-    expect(alert.className).toEqual("alert-box -success");
+    expect(alert).toHaveClass("alert-box", "-success");
   });
 });
