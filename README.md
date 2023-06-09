@@ -30,6 +30,38 @@ Abra [http://localhost:3000](http://localhost:3000) em seu browser e veja o resu
 
 Esse projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para automaticamente otimizar e carregar a Roboto, uma fonte do Google Fonts.
 
+---
+## Testes Unitários
+Os testes unitários foram desenvolvidos utilizando o [jest](https://jestjs.io/) e com o apoio do [faker.js](https://fakerjs.dev/) para gerar a massa de dados.
+
+É possível rodar os testes de duas maneiras considerando que a primeira tem o objetivo de ser utilizada para desenvolver os testes e a segunda tem o objetivo de ser utilizada em uma futura pipeline de CI/CD
+
+```bash
+npm run test
+```
+
+ou
+
+```bash
+npm run test:ci
+```
+
+---
+## Testes E2E
+Os testes E2E foram desenvolvidos utilizando o [cypress](https://www.cypress.io/) e com o apoio do [faker.js](https://fakerjs.dev/) para gerar a massa de dados.
+
+É possível rodar os testes de duas maneiras considerando que a primeira tem o objetivo de ser utilizada para desenvolver os testes e a segunda tem o objetivo de ser utilizada em uma futura pipeline de CI/CD
+
+```bash
+npm run e2e
+```
+
+ou
+
+```bash
+npm run e2e:ci
+```
+
 ## Saiba Mais
 
 Para saber mais sobre o Next.js, de uma olhada nos recursos a seguir:

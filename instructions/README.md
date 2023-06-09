@@ -10,10 +10,10 @@ Será fornecido um layout básico para ser seguido na implementação dessa pág
 ## O desafio
 Você é um especialista em segurança tentando quebrar o sistema de uma empresa que o pagou para tal. Investigando falhas na segurança você descobriu que senhas válidas devem seguir um certo padrão:
 
-OK - Senhas são números com 6 dígitos.
-OK - A senha deve estar entre 184759-856920.
-OK - Dois dígitos adjacentes devem ser iguais (como `22` em `122346`)
-OK - Começando da esquerda para a direita, os dígitos devem apenas crescer em valor ou se manter (como `111237` ou `135678`).
+- Senhas são números com 6 dígitos.
+- A senha deve estar entre 184759-856920.
+- Dois dígitos adjacentes devem ser iguais (como `22` em `122346`)
+- Começando da esquerda para a direita, os dígitos devem apenas crescer em valor ou se manter (como `111237` ou `135678`).
 
 Exemplos:
 - `222222` é válido (tem o dígito `2` repetido adjacente e nunca diminui em valor)
@@ -25,20 +25,20 @@ Sua aplicação deve validar se uma senha fornecida pelo usuário é válida e c
 ## Requisitos da aplicação
 - Crie uma página web em que o usuário possa entrar com os campos nome, email e senha em um formulário e enviar esses dados para uma API especificada mais abaixo.
 
-OK - O campo **Nome** é obrigatório.
-OK - O campo **Email** é obrigatório.
-OK - O campo **Email** deve apenas permitir uma entrada com padrão de email.
-OK - O botão para submeter o formulário deve ficar desabilitado enquanto o mesmo estiver inválido, isto é, enquanto não há um nome, um email válido ou uma senha válida.
-OK - Todos os campos e botão devem ficar desabilitados enquanto estiver mandando o resultado para a api.
-OK - As regras da validação de senha podem ser a qualquer momento modificadas, isto é, novas regras podem ser adicionadas e regras existentes podem ser removidas, portanto construa sua aplicação de uma forma que seja fácil fazer tais alterações no futuro.
+- O campo **Nome** é obrigatório.
+- O campo **Email** é obrigatório.
+- O campo **Email** deve apenas permitir uma entrada com padrão de email.
+- O botão para submeter o formulário deve ficar desabilitado enquanto o mesmo estiver inválido, isto é, enquanto não há um nome, um email válido ou uma senha válida.
+- Todos os campos e botão devem ficar desabilitados enquanto estiver mandando o resultado para a api.
+- As regras da validação de senha podem ser a qualquer momento modificadas, isto é, novas regras podem ser adicionadas e regras existentes podem ser removidas, portanto construa sua aplicação de uma forma que seja fácil fazer tais alterações no futuro.
 - O projeto deve conter testes unitários. Você pode escolher o framework para desenvolvê-los de sua preferência.
-OK - O projeto deve usar TypeScript ou ECMA 6+.
-OK - Forneça um passo a passo de como rodar sua aplicação, por exemplo, um arquivo README.md na raiz do projeto.
+- O projeto deve usar TypeScript ou ECMA 6+.
+- Forneça um passo a passo de como rodar sua aplicação, por exemplo, um arquivo README.md na raiz do projeto.
 - Forneça uma breve descrição da solução utilizada.
 
 ## Requisitos Adicionais (Não obrigatórios)
 - A página ser responsiva. Sua aparência é diferente numa resolução de celular.
-OK - Uso de pré-processador de CSS ou CSS Funcional.
+- Uso de pré-processador de CSS ou CSS Funcional.
 - Testes End to End.
 
 ## O que vamos avaliar
